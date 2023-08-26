@@ -1,8 +1,8 @@
 # AI Platform with Next.js, Tailwind CSS, TypeScript, Prisma, and Stripe
 
-![GitHub last commit](https://img.shields.io/github/last-commit/Korabi123/ai-platform)
-![GitHub stars](https://img.shields.io/github/stars/Korabi123/ai-platform?style=social)
-![GitHub forks](https://img.shields.io/github/forks/Korabi123/ai-platform?style=social)
+![GitHub last commit](https://img.shields.io/github/last-commit/Korabi123/Genius-Ai-Platform)
+![GitHub stars](https://img.shields.io/github/stars/Korabi123/Genius-Ai-Platform?style=social)
+![GitHub forks](https://img.shields.io/github/forks/Korabi123/Genius-Ai-Platform?style=social)
 
 Welcome to the AI Platform, a powerful web application built using Next.js, Tailwind CSS, TypeScript, Prisma, and Stripe. This platform serves as a robust foundation for building and deploying AI-powered applications.
 
