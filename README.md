@@ -1,34 +1,130 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# AI Platform with Next.js, Tailwind CSS, TypeScript, Prisma, and Stripe
+
+![GitHub last commit](https://img.shields.io/github/last-commit/Korabi123/ai-platform)
+![GitHub stars](https://img.shields.io/github/stars/Korabi123/ai-platform?style=social)
+![GitHub forks](https://img.shields.io/github/forks/Korabi123/ai-platform?style=social)
+
+Welcome to the AI Platform, a powerful web application built using Next.js, Tailwind CSS, TypeScript, Prisma, and Stripe. This platform serves as a robust foundation for building and deploying AI-powered applications.
+
+## Features
+
+- **Next.js**: Utilize the power of server-side rendering and routing to create fast and responsive web applications.
+
+- **Tailwind CSS**: Craft beautiful and efficient user interfaces with the highly customizable utility-first CSS framework.
+
+- **TypeScript**: Enhance code quality, maintainability, and productivity with TypeScript's static typing.
+
+- **Prisma**: Simplify database operations and migrations with Prisma, a modern database toolkit and ORM.
+
+- **Stripe**: Seamlessly integrate secure payment processing using Stripe to monetize your AI services.
 
 ## Getting Started
 
-First, run the development server:
+Follow these steps to get the AI Platform up and running on your local machine:
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-```
+1. **Clone the Repository**:
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+   ```bash
+   git clone https://github.com/Korabi123/Genius-Ai-Platform.git
+   ```
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+2. **Install Dependencies**:
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+   ```bash
+   cd ai-platform
+   npm install
+   ```
 
-## Learn More
+3. **Set Up Environment Variables**:
 
-To learn more about Next.js, take a look at the following resources:
+   Create a `.env` file in the root directory and configure your environment variables. You'll need to set up your database connection, Stripe API keys, and any other necessary variables.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+   ```env
+     # This was inserted by `prisma init`:
+    # Environment variables declared in this file are automatically made available to Prisma.
+    # See the documentation for more detail: https://pris.ly/d/prisma-schema#accessing-environment-variables-from-the-schema
+    
+    # Prisma supports the native connection string format for PostgreSQL, MySQL, SQLite, SQL Server, MongoDB and CockroachDB.
+    # See the documentation for all the connection string options: https://pris.ly/d/connection-strings
+    
+    DATABASE_URL=""
+    
+    
+    # Clerk auth
+    NEXT_PUBLIC_CLERK_PUBLISHABLE_KEY=
+    CLERK_SECRET_KEY=
+    
+    NEXT_PUBLIC_CLERK_SIGN_IN_URL=/sign-in
+    NEXT_PUBLIC_CLERK_SIGN_UP_URL=/sign-up
+    NEXT_PUBLIC_CLERK_AFTER_SIGN_IN_URL=/dashboard
+    NEXT_PUBLIC_CLERK_AFTER_SIGN_UP_URL=/dashboard
+    
+    # OpenAI
+    OPENAI_API_KEY=
+    
+    # ReplicateAI
+    REPLICATE_API_TOKEN=
+    
+    # Stripe
+    STRIPE_API_KEY=
+    STRIPE_WEBHOOK_SECRET=
+    
+    # App url
+    NEXT_PUBLIC_APP_URL=http://localhost:3000
+   ```
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+4. **Database Migration**:
 
-## Deploy on Vercel
+   Run Prisma migrations to create your database schema.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+   ```bash
+   npx prisma db push
+   ```
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+5. **Start the Development Server**:
+
+   ```bash
+   npm run dev
+   ```
+
+6. **Open in Your Browser**:
+
+   Your AI Platform should now be running at [http://localhost:3000](http://localhost:3000). You can access it in your browser to start building and testing your AI-powered applications.
+
+## Deployment
+
+When you're ready to deploy your AI Platform to production, you can follow Next.js and your hosting provider's deployment guides. Make sure to set your environment variables for the production environment.
+
+## Contributing
+
+We welcome contributions! If you'd like to enhance this AI Platform or fix any issues, please follow these steps:
+
+1. Fork the repository.
+
+2. Create a new branch for your feature or bug fix:
+
+   ```bash
+   git checkout -b feature/new-feature
+   ```
+
+3. Make your changes and commit them:
+
+   ```bash
+   git commit -m "Add new feature"
+   ```
+
+4. Push your changes to your fork:
+
+   ```bash
+   git push origin feature/new-feature
+   ```
+
+5. Open a pull request to the `main` branch of this repository. We'll review your changes and merge them if they align with the project's goals.
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+## Acknowledgments
+
+We want to express our gratitude to the open-source community for their contributions, which have made this project possible.
